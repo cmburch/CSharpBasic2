@@ -11,7 +11,7 @@ namespace CSharpBasic2
             Console.WriteLine("Hi {0} I am {1} ", to, Name);
         }
 
-        public Person Parse(string str)
+        public static Person Parse(string str)
         {
             var person = new Person();
             person.Name = str;
@@ -30,6 +30,9 @@ namespace CSharpBasic2
             var person = new Person();
             person.Name = "John";
             person.Introduce("Max");
+
+            var person2 = Person.Parse("Henry");
+            Console.WriteLine(person2);
         }
     }
 }
