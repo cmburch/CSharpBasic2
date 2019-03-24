@@ -85,14 +85,21 @@ namespace CSharpBasic2
                 //create a point class
 
                 var point1 = new Point(10, 12);
-                point1.Move(null);
+                point1.Move(null);//this will send to the console error message
 
                 point1.Move(100, 10);
             }
             catch (Exception ex)
             {
-                Console.WriteLine("unexpected error has occured");
+                Console.WriteLine("unexpected error has occured " + ex);
             }
+
+            var calculator = new Calculator();
+            var totalAdd = calculator.Add(1, 3, 4, 5);
+
+            Console.WriteLine("total added was " + totalAdd);
+            Console.WriteLine(calculator.Add(new int[] { 1, 2, 3, 4 }));
+
 
         }
     }
