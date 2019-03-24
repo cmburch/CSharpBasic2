@@ -77,6 +77,23 @@ namespace CSharpBasic2
             var order = new Order();
             //customer.Orders
 
+
+        
+
+            try
+            {
+                //create a point class
+
+                var point1 = new Point(10, 12);
+                point1.Move(null);
+
+                point1.Move(100, 10);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("unexpected error has occured");
+            }
+
         }
     }
 
@@ -104,6 +121,19 @@ namespace CSharpBasic2
                 throw new ArgumentNullException(nameof(newLocation));
             }
             Move(newLocation.x, newLocation.y);
+        }
+    }
+
+    public class Calculator
+    {
+        public int Add(params int[] numbers)
+        {
+            var sum = 0;
+            foreach (var number in numbers)
+            {
+                sum += number;
+            }
+            return sum;
         }
     }
 }
