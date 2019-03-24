@@ -6,10 +6,19 @@ namespace CSharpBasic2
     public class Customer
     {
         public string Name;
+        public int Id;
+
+        public Customer() { }
 
         public Customer(string name)
         {
             this.Name = name;
+        }
+        //constructor overloading
+        public Customer(int id , string name) 
+        {
+            this.Name = name;
+            this.Id = id;
         }
     }
 
