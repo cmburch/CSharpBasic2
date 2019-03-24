@@ -61,6 +61,14 @@ namespace CSharpBasic2
             person.Name = "John";
             person.Introduce("Max");
 
+            //OBJECT INTIALIZERS
+            //use this syntax when there are no constructors on your classes
+            var person1 = new Person
+            {
+                Name = "Mosh"
+            };
+
+
             var person2 = Person.Parse("Henry");
             Console.WriteLine(person2);
 
