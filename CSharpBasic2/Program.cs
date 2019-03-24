@@ -1,14 +1,22 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace CSharpBasic2
 {   
+    public class Order
+    {
 
+    }
     public class Customer
     {
         public string Name;
         public int Id;
+        public List<Order> Orders;
 
-        public Customer() { }
+        public Customer()
+        {
+            Orders = new List<Order>();
+        }
 
         public Customer(string name)
         {
@@ -54,6 +62,9 @@ namespace CSharpBasic2
 
             var person2 = Person.Parse("Henry");
             Console.WriteLine(person2);
+
+
+            //create orders
         }
     }
 }
