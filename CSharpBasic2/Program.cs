@@ -18,14 +18,15 @@ namespace CSharpBasic2
             Orders = new List<Order>();
         }
 
-        public Customer(string name)
+        public Customer(string name):this()//this calls the constructer without parameters
         {
             this.Name = name;
         }
         //constructor overloading
-        public Customer(int id , string name) 
+        public Customer(int id , string name):this(name)
         {
-            this.Name = name;
+            //this.Name = name; // this line is no longer need because the constructor is called
+
             this.Id = id;
         }
     }
@@ -63,8 +64,11 @@ namespace CSharpBasic2
             var person2 = Person.Parse("Henry");
             Console.WriteLine(person2);
 
-
+            var customer = new Customer();
             //create orders
+            var order = new Order();
+            customer.Orders
+
         }
     }
 }
