@@ -2,6 +2,17 @@
 
 namespace CSharpBasic2
 {   
+
+    public class Customer
+    {
+        public string Name;
+
+        public Customer(string name)
+        {
+            this.Name = name;
+        }
+    }
+
     public class Person
     {
         public string Name;
@@ -19,6 +30,7 @@ namespace CSharpBasic2
             return person;
         }
     }
+
     class MainClass
     {   
         //Declaring static members
